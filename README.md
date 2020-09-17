@@ -29,6 +29,6 @@ The bot will ask you :
 #### How many accounts do you want to sign in
 #### The user and passowd for each account
 For each account, the bot will try to log in, make sure to allow it on your app. If type your login or password wrong, the bot will keep asking the correct information
-### The URL from the post that you want to tag the people
-### And how many people you want to tag in each commentary
+#### The URL from the post that you want to tag the people
+#### And how many people you want to tag in each commentary
 
