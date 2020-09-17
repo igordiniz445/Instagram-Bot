@@ -9,7 +9,7 @@ pip3 install selenium
 
 After that, run the bot.py file to start the script
 ```
-pip3 bot.py
+python bot.py
 ```
 
 ### Requirements
