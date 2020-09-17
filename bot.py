@@ -70,6 +70,7 @@ class InstagramBot:
         
 
     def relogar(self):
+        self.comment_errors = 0
         oldriver = self.driver
         oldriver.close()
         self.driver = self.createInstanceOfDriver()
@@ -213,7 +214,7 @@ class InstagramBot:
         except:
             self.comment_count -= 1
             print("Não foi possível comentar. Vamos tentar novamente mais algumas vezes\n")
-            print("Quantidade de pessoas marcadas até agora: "+str(self.comment_count)+"\n")
+            print("Quantidade de pessoas marcadas até agora: [ "+str(self.comment_count)+" ]\n")
             self.comment_errors += 1
             if(self.comment_errors >= 3):
                 print("[===== Conta atual bloqueada, trocando de conta agora. =====]\n")
