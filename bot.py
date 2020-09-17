@@ -112,6 +112,8 @@ class InstagramBot:
             time.sleep(3)
             print("Retomando os comentarios ...\n")
             time.sleep(2)
+            driver.get(self.url)
+            time.sleep(3)
             self.comentar_sorteio()
         except:
             print("Falha ao logar")
@@ -142,6 +144,8 @@ class InstagramBot:
             botao_salvar = driver.find_element_by_xpath("//button[text()='Salvar informações']")
             #Se achar esse botão, significa que o login foi feito com sucesso.
             botao_salvar.click()
+            time.sleep(3)
+            driver.get(self.url)
             time.sleep(3)
             self.comentar_sorteio()
         except:
@@ -178,8 +182,7 @@ class InstagramBot:
 
     def comentar_sorteio(self):
         driver = self.driver
-        driver.get(self.url)
-        time.sleep(3)
+        
         try:
             campo_comentario = driver.find_element_by_xpath("//textarea[@aria-label='Adicione um comentário...']")
             campo_comentario.click()
