@@ -121,8 +121,6 @@ class InstagramBot:
             exit()
         
 
-        
-
     def begin(self):
         print("Fazendo Login na conta principal ... \n")
         driver = self.driver
@@ -159,7 +157,7 @@ class InstagramBot:
         while(i < len(user)):
             indice = 0
             nome = user[i]
-            while len(user[i])>4 and indice < len(user[i])-3:
+            while len(user[i])>4 and indice < len(user[i])-1:
                 letra = nome[indice]
                 field.send_keys(letra)
                 time.sleep(random.randint(2,7)/30)
